@@ -1,5 +1,8 @@
 ## MIUI 浏览器增强
-### 描述：恢复MIUI 浏览器的广告拦截功能，将会用到 **chattr** 命令防止恢复，请了解下 [chattr](https://www.cnbugs.com/post-3216.html)
+
+
+描述：恢复MIUI 浏览器的广告拦截功能，将会用到 **chattr** 命令防止恢复，请了解下 [chattr](https://www.cnbugs.com/post-3216.html)
+## 
 
 ### 合并 **源** 如下，感谢各位大佬的规则！
 
