@@ -22,3 +22,5 @@
 ## 说明
 
 > 模块目录( ``/data/adb/modules/MIUI_browser_key`` )下的 ``配置.prop`` 可以更换规则，更改完配置无需重启，直接执行模块目录下的service.sh。
+
+## 访问人数 : ![visitors](https://visitor-badge.glitch.me/badge?page_id=lingeringsound.Miui_Browser_enhance&left_color=green&right_color=red)
