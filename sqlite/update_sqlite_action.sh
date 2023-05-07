@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #加载公共函数
-source "`pwd`/util_function.sh"
+source ./util_function.sh
 
 #定义下载目录
 Download_Rules="`pwd`/download"
