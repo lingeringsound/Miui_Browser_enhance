@@ -132,8 +132,4 @@ for url in domain_rules_files:
 
 #重命名文件
 os.rename(target_sqlite_file, output_Rules_db_file)
-#添加压缩包文件
-zip_file = zipfile.ZipFile('Marked_Ads_database.zip', 'w')
-zip_file.write('Marked Ads', compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
-zip_file.close()
 
