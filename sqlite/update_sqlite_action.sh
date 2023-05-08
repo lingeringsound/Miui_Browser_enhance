@@ -22,6 +22,10 @@ done
 #生成sqlite文件
 python "`pwd`/sqlite/sqlite.py"
 
+#更新 README 信息
+update_README_info
+
+#删除临时文件夹
 rm -rf "`pwd`/sqlite/download" "`pwd`/sqlite/output"
 
 if test -f "`pwd`/sqlite/Marked Ads" ;then
