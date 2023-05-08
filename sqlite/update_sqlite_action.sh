@@ -26,5 +26,5 @@ rm -rf "`pwd`/sqlite/download" "`pwd`/sqlite/output"
 
 if test -f "`pwd`/sqlite/Marked Ads" ;then
 	cd "`pwd`/sqlite"
-	zip -r9 "`pwd`/Marked_Ads_database.zip" ./'Marked Ads'
+	zip -r9 "`pwd`/Marked_Ads_database.zip" ./'Marked Ads' && echo "※`date +'%F %T'`压缩包位置: `pwd`/Marked_Ads_database.zip "
 fi
