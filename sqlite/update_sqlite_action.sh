@@ -24,5 +24,7 @@ python "`pwd`/sqlite/sqlite.py"
 
 rm -rf "`pwd`/sqlite/download" "`pwd`/sqlite/output"
 
-
-
+if test -f "`pwd`/sqlite/Marked Ads" ;then
+	cd "`pwd`/sqlite"
+	zip -r9 "`pwd`/Marked_Ads_database.zip" ./'Marked Ads'
+fi
