@@ -17,12 +17,7 @@
 
 ### [蓝奏云下载链接](https://keytoolazy.lanzouw.com/b03j6gxra) **密码：666**
 
-- 103
- > #### 更新规则，修复误杀。
-- 104
- > #### 更新规则，修复误杀。
- > #### 更新隐私规则
- 
-
-
+- v108
+ > #### 添加修改广告标记 `Marked Ads` 
+ > #### 每天会连接网络，更新一次，不需要的时候，可以修改模块配置`/data/adb/modules/MIUI_browser_key/配置.prop` ，然后执行模块目录下的`service.sh`。
 
