@@ -10,7 +10,7 @@ Download_Rules="`pwd`/sqlite/download"
 clean_up_tmpfile
 
 #下载规则
-download_link "https://raw.fgit.ml/lingeringsound/adblock_auto/main/Rules/adblock_auto_lite.txt" "${Download_Rules}"
+download_link "https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto_lite.txt" "${Download_Rules}"
 
 #读取下载好的Adblock规则
 for file in "${Download_Rules}"/*.txt
