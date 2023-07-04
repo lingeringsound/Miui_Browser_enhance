@@ -31,7 +31,7 @@
  > #### 第四行: Adblock规则的类型
  > ##### 以"#"或者域名后面带"#"号的则为css修饰规则，需要填"1"
  > ##### 以"||"或者"."之类为域名拦截规则，需要填"2"。
-### 制作的好的标记文件(2023-07-04 09:08:37)
+### 制作的好的标记文件(2023-07-04 21:21:54)
  > #### 订阅源: [混合规则精简版](https://lingeringsound.github.io/adblock_auto/Rules/adblock_auto_lite.txt)
  > #### 下载链接: [点击下载](https://raw.fgit.ml/lingeringsound/Miui_Browser_enhance/main/sqlite/Marked%20Ads)
 
