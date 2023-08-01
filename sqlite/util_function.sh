@@ -55,6 +55,7 @@ mk_new_file "${output_folder}/${ad_fiter##*/}_domain.txt"
 function clean_up_tmpfile(){
 test -d "`pwd`/sqlite/output" && rm -rf "`pwd`/sqlite/output"
 test -f "`pwd`/sqlite/Marked_Ads.db" && rm -rf "`pwd`/sqlite/Marked_Ads.db"
+test -f "`pwd`/sqlite/Marked Ads" && rm -rf "`pwd`/sqlite/Marked Ads"
 }
 
 function update_README_info(){
