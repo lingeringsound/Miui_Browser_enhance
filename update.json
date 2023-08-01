@@ -1,6 +1,6 @@
 {
-	"version": "MIUI浏览器增强v112",
-	"versionCode": 112,
-	"zipUrl": "https://raw.fgit.ml/lingeringsound/Miui_Browser_enhance/main/module/MIUIbrowser112.zip",
-	"changelog": "https://raw.fgit.ml/lingeringsound/Miui_Browser_enhance/main/update.md"
+	"version": "MIUI浏览器增强v113",
+	"versionCode": 113,
+	"zipUrl": "https://lingeringsound.github.io/Miui_Browser_enhance/module/MIUIbrowser113.zip",
+	"changelog": "https://lingeringsound.github.io/Miui_Browser_enhance/update.md"
 }
