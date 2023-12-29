@@ -22,5 +22,7 @@
  > #### 每天会连接网络，更新一次，不需要的时候，可以修改模块配置`/data/adb/modules/MIUI_browser_key/配置.prop` ，然后执行模块目录下的`service.sh`。
 - v120
  > 修复部分网站播放视频黑屏问题。
+- v121
+ > 修复`Android 14` 找不到*UID*的问题。
  
  
