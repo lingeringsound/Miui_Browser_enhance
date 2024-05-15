@@ -34,7 +34,7 @@ done
 function mkdir_css_Rules(){
 local ad_fiter="${1}"
 test ! -f "${ad_fiter}" && return
-local CSS_Rules=`cat "${ad_fiter}" 2>/dev/null | sed 's|“|"|g;s|”|"|g' | sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' | grep -E '#' | grep -Ev "^\|\|"`
+local CSS_Rules=`cat "${ad_fiter}" 2>/dev/null | sed 's|“|"|g;s|”|"|g' | sed '/^!/d;/^[[:space:]]*$/d;/^\[.*\]$/d' | grep -E '#' | grep -Ev "^\|\|##\.iframe|##iframe|iframe\[|#\@#iframe|#\@#\.iframe"`
 local output_folder="`pwd`/sqlite/output/css_folder"
 mkdir -p "${output_folder}"
 echo "${CSS_Rules}" >> "${output_folder}/${ad_fiter##*/}_css.txt"
