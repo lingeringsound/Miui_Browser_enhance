@@ -26,5 +26,7 @@
  > 修复`Android 14` 找不到*UID*的问题。
 - v122
  > 修正`crond`
-
+- v123
+ > 剥离`iframe`规则，MIUI浏览器不支持iframe注入，不然视频播放器会黑屏。
+ 
  
