@@ -1,0 +1,37 @@
+name: update_sqlite_rules
+on:
+  watch:
+    types: [started]
+  schedule:
+    - cron: '0 */15 * * *'
+
+jobs:
+   master:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Create local changes
+      run: |
+        sudo rm -rf /etc/localtime
+        sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+        sudo apt-get install -y dos2unix
+        bash ./sqlite/update_sqlite_action.sh
+    - name: Commit files
+      run: |
+        git pull
+        git config --local user.email ${{ secrets.MYEMAIL }}
+        git config --local user.name ${{ secrets.MYUSERNAME }}
+        git add .
+        git commit -a -m "Rules update"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
+        force : true
