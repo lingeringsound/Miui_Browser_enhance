@@ -60,6 +60,9 @@ for url in css_rules_files:
                 lines = res.split('\n')
                 length = len(lines)
                 print("开始添加 %s，共计 %d 条 " % (filename, length))
+                con = sqlite3.connect( target_sqlite_file )
+                cur = con.cursor()
+                last_percent = -1
                 for line in lines:
                     if(line.startswith('[') or line.startswith('!') or (not line)):
                         length -= 1
@@ -72,14 +75,15 @@ for url in css_rules_files:
 #                        指定生效域名一般填空，因为MIUI会识别为全局生效
                         rules_hosts = ''
 #                        写入指定的sqlite文件
-                        con = sqlite3.connect( target_sqlite_file )
-                        cur = con.cursor()
                         cur.execute("INSERT INTO rules (host, rule, rule_type) VALUES(?, ?, ?)", (rules_hosts, rule_single, rules_type_number))
-                        con.commit()
-                        con.close()
                         id += 1
                         percent = (id - 66666 - total) / length
-                        print("进度：{:.1%} [{}/{}]".format(percent, id - 66666 - total, length), end='\r')
+                        percent_bucket = int(percent * 10) * 10
+                        if percent_bucket != last_percent:
+                            print("进度：{}% [{}/{}]".format(percent_bucket, id - 66666 - total, length))
+                            last_percent = percent_bucket
+                con.commit()
+                con.close()
                 print("\n%s 添加完成\n" % filename)
                 total += length
                 break
@@ -104,6 +108,9 @@ for url in domain_rules_files:
                 lines = res.split('\n')
                 length = len(lines)
                 print("开始添加 %s，共计 %d 条 " % (filename, length))
+                con = sqlite3.connect( target_sqlite_file )
+                cur = con.cursor()
+                last_percent = -1
                 for line in lines:
                     if(line.startswith('[') or line.startswith('!') or (not line)):
                         length -= 1
@@ -112,14 +119,15 @@ for url in domain_rules_files:
                         rules_type_number = '2'
                         rule_single = line
                         rules_hosts = ''
-                        con = sqlite3.connect( target_sqlite_file )
-                        cur = con.cursor()
                         cur.execute("INSERT INTO rules (host, rule, rule_type) VALUES(?, ?, ?)", (rules_hosts, rule_single, rules_type_number))
-                        con.commit()
-                        con.close()
                         id += 1
                         percent = (id - 66666 - total) / length
-                        print("进度：{:.1%} [{}/{}]".format(percent, id - 66666 - total, length), end='\r')
+                        percent_bucket = int(percent * 10) * 10
+                        if percent_bucket != last_percent:
+                            print("进度：{}% [{}/{}]".format(percent_bucket, id - 66666 - total, length))
+                            last_percent = percent_bucket
+                con.commit()
+                con.close()
                 print("\n%s 添加完成\n" % filename)
                 total += length
                 break
@@ -131,4 +139,3 @@ for url in domain_rules_files:
 
 #重命名文件
 os.rename(target_sqlite_file, output_Rules_db_file)
-
