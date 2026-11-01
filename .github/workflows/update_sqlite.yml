@@ -1,5 +1,6 @@
 name: update_sqlite_rules
 on:
+  workflow_dispatch:
   watch:
     types: [started]
   schedule:
